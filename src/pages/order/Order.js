@@ -3,8 +3,9 @@ import Layout from '../../Component/layout/Layout'
 import myContext from '../../contex/data/myContext'
 import Loader from '../../Component/loader/Loader'
 
+
 function Order() {
-  const userid = JSON.parse(localStorage.getItem('currentUser')).user.uid
+  const userid = JSON.parse(localStorage.getItem('user')).user.uid
   const context = useContext(myContext)
   const { mode, loading, order } = context
   return (

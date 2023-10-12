@@ -12,12 +12,13 @@ import NoTFound from './pages/notfound/NotFound';
 import MyState from './contex/data/myState';
 import Login from './pages/registraton/Login';
 import Signup from './pages/registraton/Signup';
-import Product  from './pages/allproducts/Allproducts';
+import ProductInfo from './pages/product info/ProductInfo';
 import UpdateProduct from './pages/admin/Parges/UpdateProduct';
 import AddProduct from './pages/admin/Parges/AddProduct';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Navigate } from 'react-router-dom';
+import Allproducts from './pages/allproducts/Allproducts';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path="allproducts" element={<Allproducts />} />
         <Route path="/order" element={  
         <ProtectedRoutes>
               <Order />
@@ -37,7 +39,7 @@ function App() {
           </ProtectedRoutesForAdmin>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/product/:id" element={<Product />} />
+        <Route path='/productinfo/:id' element={<ProductInfo/>} />
         <Route path="/addproduct" element={ 
         <ProtectedRoutesForAdmin>
           <AddProduct />

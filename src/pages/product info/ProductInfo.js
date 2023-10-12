@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
-import Layout from '../../components/layout/Layout'
-import myContext from '../../context/data/myContext';
+import Layout from '../../Component/layout/Layout'
+import myContext from '../../contex/data/myContext'
 import { useParams } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { doc, getDoc } from 'firebase/firestore';
 import { toast } from 'react-toastify';
 import { addToCart } from '../../redux/cartSlice';
-import { fireDB } from '../../fireabase/FirebaseConfig';
+import { fireDB } from '../../Fire/Fire';
 
 function ProductInfo() {
     const context = useContext(myContext);
@@ -177,7 +177,7 @@ function ProductInfo() {
 
                             <div className="flex">
                                 <span className="title-font font-medium text-2xl text-gray-900">
-                                ₹{products.price}
+                                ${products.price}
                                 </span>
                                 <button  onClick={()=>addCart(products)} className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                                     Add To Cart

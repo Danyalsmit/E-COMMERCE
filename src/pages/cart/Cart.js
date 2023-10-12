@@ -82,7 +82,7 @@ function Cart() {
       key: "",
       key_secret: "",
       amount: parseInt(grandTotal * 100),
-      currency: "INR",
+      currency: "PKR",
       order_receipt: 'order_rcptid_' + name,
       name: "E-PAkistan",
       description: "for testing purpose",
