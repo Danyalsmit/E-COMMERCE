@@ -72,7 +72,7 @@ export default function Navbar() {
                     </Link>
                   </div>
 
-                  {user?.user?.email === 'knupadhyay784@gmail.com' ? <div className="flow-root">
+                  {user?.user?.email === 'kd818552@gmail.com' ? <div className="flow-root">
                     <Link to={'/dashboard'} className="-m-2 block p-2 font-medium text-gray-900" style={{ color: mode === 'dark' ? 'white' : '', }}>
                       admin
                     </Link>
@@ -99,7 +99,7 @@ export default function Navbar() {
                       alt=""
                       className="block h-auto w-5 flex-shrink-0"
                     />
-                    <span className="ml-3 block text-base font-medium text-gray-900" style={{ color: mode === 'dark' ? 'white' : '', }}>INDIA</span>
+                    <span className="ml-3 block text-base font-medium text-gray-900" style={{ color: mode === 'dark' ? 'white' : '', }}>PAKISTAN</span>
                     <span className="sr-only">, change currency</span>
                   </a>
                 </div>
@@ -111,9 +111,12 @@ export default function Navbar() {
 
       {/* desktop  */}
       <header className="relative bg-white">
+    
         {/* <p className="flex h-10 items-center justify-center bg-pink-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8" style={{ backgroundColor: mode === 'dark' ? 'rgb(62 64 66)' : '', color: mode === 'dark' ? 'white' : '', }}>
           Get free delivery on orders over $300
         </p> */}
+        
+
 
         <nav aria-label="Top" className="bg-gray-100 px-4 sm:px-6 lg:px-8 shadow-xl " style={{ backgroundColor: mode === 'dark' ? '#282c34' : '', color: mode === 'dark' ? 'white' : '', }}>
           <div className="">
