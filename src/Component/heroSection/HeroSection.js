@@ -19,7 +19,7 @@ function HeroSection() {
       />
 
       <img
-        src="https://www.opendesignsin.com/blog/wp-content/uploads/2020/07/Scope-of-eCommerce.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+        src="https://opendesignsin.com/blog/wp-content/uploads/2020/07/Scope-of-eCommerce.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
         alt="image 3"
         className="h-full w-full object-cover"
       />
