@@ -24,7 +24,7 @@ export default function Navbar() {
 
 
   return (
-    <div className="bg-white sticky top-0 z-50  "  >
+    <div className="bg-white sticky top-0 z-50">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="bg-gray-100 px-4 sm:px-6 lg:px-8 shadow-xl" onClose={setOpen}>
@@ -32,9 +32,9 @@ export default function Navbar() {
             as={Fragment}
             enter="transition-opacity ease-linear duration-300"
             enterFrom="opacity-0"
-            enterTo="opacity-100"
+            enterTo="opacity-50"
             leave="transition-opacity ease-linear duration-300"
-            leaveFrom="opacity-100"
+            leaveFrom="opacity-50"
             leaveTo="opacity-0"
           >
             <div className="fixed inset-0 bg-black bg-opacity-25" />
@@ -50,8 +50,8 @@ export default function Navbar() {
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full"
             >
-              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl" style={{ backgroundColor: mode === 'dark' ? 'rgb(40, 44, 52)' : '', color: mode === 'dark' ? 'white' : '', }}>
-                <div className="flex px-4 pb-2 pt-28">
+              <Dialog.Panel className="relative flex w-full max-w-xs sm:max-w-sm flex-col overflow-y-auto bg-white pb-12 shadow-xl">
+                <div className="flex px-4 sm:px-6 py-2 sm:py-4">
                   <button
                     type="button"
                     className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
@@ -63,33 +63,34 @@ export default function Navbar() {
                 </div>
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
 
-                  <Link to={'/allproducts'} className="text-sm font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                  <Link to={'/allproducts'} className="text-sm font-medium text-gray-700" style={{ color: mode === 'dark' ? 'white' : '' }}>
                     All Products
                   </Link>
                   <div className="flow-root">
-                    <Link to={'/order'} style={{ color: mode === 'dark' ? 'white' : '', }} className="-m-2 block p-2 font-medium text-gray-900">
+                    <Link to={'/order'} style={{ color: mode === 'dark' ? 'white' : '' }} className="-m-2 block p-2 font-medium text-gray-900">
                       Order
                     </Link>
                   </div>
 
                   {user?.user?.email === 'kd818552@gmail.com' ? <div className="flow-root">
-                    <Link to={'/dashboard'} className="-text-sm font-medium text-gray-700" style={{ color: mode === 'dark' ? 'white' : '', }}>
+                    <Link to={'/dashboard'} className="text-sm font-medium text-gray-700" style={{ color: mode === 'dark' ? 'white' : '' }}>
                       admin
                     </Link>
                   </div> : ""}
-                  {user ? <a onClick={logout} className="text-sm font-medium text-gray-700 cursor-pointer  " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                  {user ? <a onClick={logout} className="text-sm font-medium text-gray-700 cursor-pointer" style={{ color: mode === 'dark' ? 'white' : '' }}>
                     Logout
-                  </a> : <Link to={'/signup'} className="text-sm font-medium text-gray-700 cursor-pointer  " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                  </a> : <Link to={'/signup'} className="text-sm font-medium text-gray-700 cursor-pointer" style={{ color: mode === 'dark' ? 'white' : '' }}>
                     Signup
                   </Link>}
-
 
                   <div className="flow-root">
                     <Link to={'/'} className="-m-2 block p-2 font-medium text-gray-700 cursor-pointer">
                       <img
                         className="inline-block w-10 h-10 rounded-full"
                         src="https://overreacted.io/static/profile-pic-c715447ce38098828758e525a1128b87.jpg"
-                        alt="Dan_Abromov" />                                        </Link>
+                        alt="Dan_Abromov"
+                      />
+                    </Link>
                   </div>
                 </div>
 
@@ -97,15 +98,17 @@ export default function Navbar() {
                   <a href="#" className="-m-2 flex items-center p-2">
                     <img
                       src="https://static.vecteezy.com/system/resources/previews/000/409/674/original/illustration-of-pakistan-flag-vector.jpg"
-                     
                       alt="pakistan"
                       className="block h-auto w-5 flex-shrink-0"
                     />
-                    <span className="ml-3 block text-base font-medium text-gray-900" style={{ color: mode === 'dark' ? 'white' : '', }}>PAKISTAN</span>
+                    <span className="ml-3 block text-base font-medium text-gray-900" style={{ color: mode === 'dark' ? 'white' : '' }}>
+                      PAKISTAN
+                    </span>
                     <span className="sr-only">, change currency</span>
                   </a>
                 </div>
               </Dialog.Panel>
+
             </Transition.Child>
           </div>
         </Dialog>
