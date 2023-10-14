@@ -84,7 +84,7 @@ function Cart() {
       amount: parseInt(grandTotal * 100),
       currency: "PKR",
       order_receipt: 'order_rcptid_' + name,
-      name: "E-PAkistan",
+      name: "E-Pakistan",
       description: "for testing purpose",
       handler: function (response) {
 
